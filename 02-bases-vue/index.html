@@ -7,10 +7,12 @@
 <body>
   <!-- Control absoluto de este DIV con Vue -->
   <div id="myApp">
-    <h1>Hola Mundo</h1>
-    <p>{{message}}</p>
     <p>{{quote}}</p>
     <blockquote>--{{author}}</blockquote>
+
+    <button v-on:click="changeQuote">
+      Change quote
+    </button>
   </div>
   <script src="app.js"></script>
 </body>

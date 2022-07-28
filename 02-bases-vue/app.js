@@ -25,6 +25,7 @@ const quotes = [{
 ]
 
 const app = Vue.createApp({
+
   data() {
     return {
       quotes,
@@ -33,10 +34,14 @@ const app = Vue.createApp({
   },
   methods: {
     addQuote() {
-      quotes.unshift({
+
+      this.quotes.unshift({
         quote: this.newQuote
       })
     }
   }
+
 })
+
+
 app.mount('#myApp')

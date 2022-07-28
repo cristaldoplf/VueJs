@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Vue.js Intro</title>
   <script src="https://unpkg.com/vue@next"></script>
 </head>
+
 <body>
   <!-- Control absoluto de este DIV con Vue -->
   <div id="myApp">
-    <p>{{quote}}</p>
-    <blockquote>--{{author}}</blockquote>
 
-    <button v-on:click="changeQuote">
-      Change quote
-    </button>
+    <h1>Batman quotes</h1>
+    <ul>
+      <!-- similar al ciclo for in -->
+      <li v-for="({quote,author},index) in quotes"> 
+        <span>{{index+1}} - {{quote}}</span>
+        <blockquote>{{author}}</blockquote>
+      </li>
+    </ul>
   </div>
+
   <script src="app.js"></script>
 </body>
+
 </html>

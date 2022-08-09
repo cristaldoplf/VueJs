@@ -27,6 +27,7 @@ describe('Counter Component', () => {
     expect(h2Value).toBe('Counter')
 
   });
+
   test('el valor por defecto tiene que ser 100 en el p', () => {
     let value = wrapper.find('[data-testid="counter"]')
     expect(value.text()).toBe("100")
@@ -63,9 +64,7 @@ describe('Counter Component', () => {
 
   test('debe de establecer el valor por defecto', () => {
     console.log(wrapper.props())
-    const {
-      start
-    } = wrapper.props()
+    const {start} = wrapper.props()
     const value = wrapper.find('[data-testid="counter"]').text()
     expect(value).toBe(start.toString())
   });
@@ -73,7 +72,7 @@ describe('Counter Component', () => {
   test('debe de mostrar la prop title', () => {
     const wrapper = shallowMount(Counter, {
       props: {
-        title:'Hola Mundo'
+        title: 'Hola Mundo'
       }
     })
     const value = wrapper.find('h2').text()
